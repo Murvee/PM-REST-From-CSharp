@@ -16,9 +16,9 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             // Define PM server parameters
-            var workspace = "ejortegau1";
+            var workspace = "myWorkspace";
             var protocol = "https";
-            var hostname = "trial.processmaker.com";
+            var hostname = "my.processmaker.server";
             var url = protocol + "://" + hostname;
             
             // Fix SSL certificate issues - may or not be required depending on type of certificate (if using HTTPS) and local configuration
@@ -35,8 +35,8 @@ namespace ConsoleApplication1
             request.AddParameter("scope", "*");
             request.AddParameter("client_id", "DZNXYIEDOQRAWFJGSZYAXSSHOCAEFWBI");
             request.AddParameter("client_secret", "85978646557c6ea9fb75744071747093");
-            request.AddParameter("username", "ejortegau@gmail.com");
-            request.AddParameter("password", "Al3ph512.");
+            request.AddParameter("username", "my_pm_username");
+            request.AddParameter("password", "my_pm_password");
             IRestResponse response = client.Execute(request);
             // Parse response to get the token as a string
             var content = response.Content;
